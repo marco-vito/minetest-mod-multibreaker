@@ -12,5 +12,7 @@ It's possible to configure the mod in a way that a **multibreaking** action:
   - To be activated only with a given set of tool;
   - To be activated only with a specific key pressed;
   - To **multibreak** a given max number of blocks per interaction.
+  
+  # Project Goals #
  
  This mod was build by *marco-vito* as a way to learn Lua language, and by *stealthio* as a way to get back to modding in Minetest.
