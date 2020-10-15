@@ -4,7 +4,7 @@
 like chopping dozens of blocks of wood, or digging dozens of blocks of minerals. This mod also allow cutting down full 
 trees, so no floating stump will be left in the air, when the player is out of its reach to cut it down manually.
 
-#Instructions#
+# Instructions #
 
 It's possible to configure the mod in a way that a **multibreaking** action:
 
