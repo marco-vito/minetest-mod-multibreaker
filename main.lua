@@ -43,8 +43,8 @@ configurable tool from a given set is held by the player]]--
 minetest.register_on_dignode(function(pos, oldnode, digger)
 	if(digger:is_player()) then
 		if(digger:get_player_control()[woodchopper_activation_button]) then
-      if contains(woodchopper_digging_tools, get_wielded_item()) then
-  			if contains(woodchopper_diggable_blocks, oldnode.name) then
+      if contains(woodchopper_digging_tools, digger:get_wielded_item():get_name()) then
+        if contains(woodchopper_diggable_blocks, oldnode.name) then
   				blocks_dug_in_iteration = 0
   				dig_neighbours_block(pos)
   			end
