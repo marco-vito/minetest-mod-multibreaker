@@ -3,7 +3,13 @@ woodchopper_diggable_blocks = {
 	"default:jungletree",
 	"default:pine_tree",
 	"default:acacia_tree",
-	"default:aspen_tree"
+	"default:aspen_tree",
+	"mcl_core:tree",
+	"mcl_core:darktree",
+	"mcl_core:acaciatree",
+	"mcl_core:sprucetree",
+	"mcl_core:birchtree",
+	"mcl_core:jungletree"
 }
 
 woodchopper_digging_tools = {
