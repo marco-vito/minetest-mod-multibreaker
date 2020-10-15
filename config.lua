@@ -29,7 +29,7 @@ woodchopper_digging_tools = {
 --[[Determines how much of the durability of the toll will be diminished by
 block affected by the multi-dig behaviour. By default, 1 per block; can be
 changed to 0 to not use durability of the tool in the multi-dig process]]--
-woodchopper_tool_use_per_block = 1
+woodchopper_tool_use_per_block = 10000
 
 --[[Determines the max number of blocks affected by the multi-dig. By default
 20, to stop massive deflorestation.]]--
