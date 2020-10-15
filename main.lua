@@ -1,4 +1,4 @@
-function contains(list, x)
+local function contains(list, x)
     for _, v in pairs(list) do
         if v == x then return true end
     end
@@ -26,9 +26,9 @@ local function dig_neighbours_block(pos)
 end
 
 minetest.register_on_dignode(function(pos, oldnode, digger)
-	if contains(woodchopper_diggable_blocks, oldnode.name) then
-		if(digger:is_player()) then
-			if(digger:get_player_control()[woodchopper_activation_button]) then
+	if(digger:is_player()) then
+		if(digger:get_player_control()[woodchopper_activation_button]) then
+			if contains(woodchopper_diggable_blocks, oldnode.name) then
 				blocks_dug_in_iteration = 0
 				dig_neighbours_block(pos)
 			end
