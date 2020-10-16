@@ -1,3 +1,6 @@
+--[[Configures all the types os blocks in lists that are affect by the multibreak. By
+default it aims towards wood and ores, but it coul teoretically be used for
+other types of blocks.]]--
 woodchopper_wood = {
 	"default:tree",
 	"default:jungletree",
@@ -34,7 +37,7 @@ woodchopper_t3_ores = {
 	"default:stone_with_diamond"
 }
 
---[[Configures all the tools that can be used to activate the multi-dig
+--[[Configures all the tools that can be used to activate the multibreak
 behaviour]]--
 woodchopper_digging_tools = {
 	axe_wood = woodchopper_wood,
@@ -50,18 +53,20 @@ woodchopper_digging_tools = {
 	pick_bronze = woodchopper_t3_ores,
 	pick_steel = woodchopper_t3_ores,
 	pick_mese = woodchopper_t3_ores,
-	pick_diamond = woodchopper_t3_ores	
+	pick_diamond = woodchopper_t3_ores
 }
 
 --[[Determines how much of the durability of the toll will be diminished by
-block affected by the multi-dig behaviour. By default, 1 per block; can be
-changed to 0 to not use durability of the tool in the multi-dig process]]--
-woodchopper_tool_use_per_block = 1
+block affected by the multibreak behaviour. By default, 1 makes the regular
+amount per block be applied to the tool; can be changed to 0 to not use the
+durability of the tool in the multi-dig process; can be changed to anythin
+bigger than 1 to make a multibreak cost a lot of tool resources.]]--
+woodchopper_tool_wear_multiplier = 1
 
---[[Determines the max number of blocks affected by the multi-dig. By default
+--[[Determines the max number of blocks affected by the multibreak. By default
 20, to stop massive deflorestation.]]--
 woodchopper_maximum_blocks_dug = 20
 
---[[Determines the action button that must be pressed to activate the multi-dig
+--[[Determines the action button that must be pressed to activate the multibreak
 behaviour.]]--
 woodchopper_activation_button = "sneak"
