@@ -39,7 +39,7 @@ local function dig_neighbours_block(pos, blocks, tool, dig_params)
   for i=1, #list_pos do
     if list_pos[i] then
       if blocks_dug_in_iteration >= multibreaker_maximum_blocks_dug then
-        retur
+        return
       end
       minetest.dig_node(list_pos[i])
       local wear = (dig_params.wear  * multibreaker_tool_wear_multiplier)
