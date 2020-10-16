@@ -19,7 +19,7 @@ local blocks_dug_in_iteration = 0
 
 --[[This function digs all the blocks of a given type that are adjacent to the
 block the player interact with]]--
-local function dig_neighbours_block(pos, tool)
+local function dig_neighbours_block(pos, tool, dig_params)
 	if blocks_dug_in_iteration >= woodchopper_maximum_blocks_dug then
 		return
 	end
@@ -31,10 +31,11 @@ local function dig_neighbours_block(pos, tool)
 				return
 			end
 			minetest.dig_node(list_pos[i])
-      local wear = (tool:get_wear() + woodchopper_tool_use_per_block)
-      tool:set_wear(wear)
+      local wear = (dig_params.wear  * woodchopper_maximum_blocks_dug)
+      minetest.chat_send_all(wear)
+      tool:add_wear(wear)
 			blocks_dug_in_iteration = blocks_dug_in_iteration + 1
-			dig_neighbours_block(list_pos[i], tool)
+			dig_neighbours_block(list_pos[i], tool, dig_params)
 		end
 	end
 end
@@ -49,7 +50,8 @@ minetest.register_on_dignode(function(pos, oldnode, digger)
       if contains(woodchopper_digging_tools, tool:get_name()) then
         if contains(woodchopper_diggable_blocks, oldnode.name) then
   				blocks_dug_in_iteration = 0
-  				dig_neighbours_block(pos, tool)
+          local dig_params = minetest.get_dig_params(minetest.registered_nodes[oldnode.name].groups, tool:get_tool_capabilities())
+  				dig_neighbours_block(pos, tool, dig_params)
   			end
       end
 		end

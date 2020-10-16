@@ -1,4 +1,4 @@
---[[Configures all the types os blocks that are affect by the multi-dig. By
+--[[Configures all the types os blocks that are affect by the multibreak. By
 default it aims towards wood, but it coul teoretically be used for other types
 of blocks.]]--
 woodchopper_diggable_blocks = {
@@ -15,7 +15,7 @@ woodchopper_diggable_blocks = {
 	"mcl_core:jungletree"
 }
 
---[[Configures all the tools that can be used to activate the multi-dig
+--[[Configures all the tools that can be used to activate the multibreak
 behaviour]]--
 woodchopper_digging_tools = {
 	"default:axe_wood",
@@ -27,13 +27,15 @@ woodchopper_digging_tools = {
 }
 
 --[[Determines how much of the durability of the toll will be diminished by
-block affected by the multi-dig behaviour. By default, 1 per block; can be
-changed to 0 to not use durability of the tool in the multi-dig process]]--
-woodchopper_tool_use_per_block = 10000
+block affected by the multibreak behaviour. By default, 1 makes the regular
+amount per block be applied to the tool; can be changed to 0 to not use the
+durability of the tool in the multi-dig process; can be changed to anythin
+bigger than 1 to make a multibreak cost a lot of tool resources.]]--
+multibreak_tool_wear = 10
 
 --[[Determines the max number of blocks affected by the multi-dig. By default
 20, to stop massive deflorestation.]]--
-woodchopper_maximum_blocks_dug = 20
+woodchopper_maximum_blocks_dug = 100
 
 --[[Determines the action button that must be pressed to activate the multi-dig
 behaviour.]]--
