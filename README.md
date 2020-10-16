@@ -8,7 +8,7 @@ trees, so no floating stump will be left in the air, when the player is out of i
 
 It's possible to configure the mod in a way that a **multibreaking** action:
 
-  - To expend (or not) the durability of a tool;
+  - To expend (or not) the durability of a tool (and even expend it more to create a risk/reward dynamic);
   - To be activated only with a given set of tool;
   - To be activated only with a specific key pressed;
   - To **multibreak** a given max number of blocks per interaction.
