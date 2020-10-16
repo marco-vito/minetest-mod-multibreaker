@@ -54,7 +54,6 @@ end
 behaviour can only be used during a configurable action, and while a
 configurable tool from a given set is held by the player]]--
 minetest.register_on_dignode(function(pos, oldnode, digger)
-	minetest.chat_send_all("Dug node: " .. oldnode.name .. " with " .. digger:get_wielded_item():get_name())
 	if(digger:is_player()) then
 		if(digger:get_player_control()[multibreaker_activation_button]) then
       local tool = digger:get_wielded_item()
