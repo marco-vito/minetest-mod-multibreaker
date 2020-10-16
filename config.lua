@@ -15,7 +15,7 @@ multibreaker_wood = {
 	"mcl_core:jungletree"
 }
 
-_t1_ores = {
+multibreaker_t1_ores = {
 	"default:stone_with_coal"
 }
 
